@@ -1,0 +1,4 @@
+.vscode/
+__pycache__/
+chrome_data/
+chromedriver.exe
