@@ -20,15 +20,8 @@ driver = CrazyDriver()
 
 
 def get_product_info(asin: str) -> dict:
-    """打开商品详情页，用 lxml 从 ``page_source`` 解析标题与主价文案。
-
-    Args:
-        asin: 商品 ASIN。
-
-    Returns:
-        含 ``asin``、``url``、``title``、``price`` 的字典。显式等待超时仍会解析
-        当前 ``page_source``；节点缺失或 ``text`` 为空时对应字段为空字符串 ``""``。
-    """
+    """打开商品详情页，用 lxml 从 ``page_source`` 解析标题与主价文案。"""
+    global driver
     url = f"https://www.amazon.com/dp/{asin}"
     driver.get(url)
     try:
