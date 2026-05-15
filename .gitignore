@@ -2,3 +2,6 @@
 __pycache__/
 chrome_data/
 chromedriver.exe
+
+lash_extension/
+lashes/
